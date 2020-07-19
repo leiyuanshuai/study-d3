@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./d3.v4.js"></script>
+</head>
+
+<body>
+  <div id="box1">
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+  </div>
+  <div id="box2">
+    <p class="red">red</p>
+    <p class="red">red</p>
+    <p class="red">red</p>
+    <p class="red">red</p>
+  </div>
+  <script>
+    // var p = d3.selectAll('p').filter('.red')
+    // var p = d3.selectAll('p').filter((d,i,nodes) => {
+    //   // console.log(nodes[i])
+    //   // return nodes[i].matches('.red')
+    //   return nodes[i]
+    // })
+    // var test = d3.selectAll('div').selectAll('p')
+    // console.log(test);
+    // let res;
+    // let a = 1
+    // let b = 2;
+    // if (res = a || b) {
+    //     console.log('res',res);
+    // }
+    // let box2 = document.getElementById('box2')
+    // console.log(box2.textContent)
+    // let result = d3.selectAll('div').selectAll('p').append('span').html('我是span')
+    // console.log(result)
+    let data = ['a','b','c','d']
+    let res = d3.selectAll('div').selectAll('p').data(data)
+    console.log(res);
+    // res.each(function (d,i,nodes) {
+    //   console.log('d=',d);
+    // })
+    // let size = d3.selectAll('div').selectAll('p')
+    // console.log('size=',size);
+  </script>
+</body>
+
+</html>

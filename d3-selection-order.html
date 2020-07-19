@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./d3.v4.js"></script>
+</head>
+
+<body>
+  <div id="box">
+    <p class="p1" id="p1">我是p1</p>
+    <p class="p2">我是p2</p>
+  </div>
+  <script>
+    console.log(document.getElementById('box').nextSibling)
+    let all = d3.selectAll("p").each(function (d, i, nodes) {
+      // console.log('this',this);
+      // console.log(arguments);
+      // d3.select(this).on('click', function () {
+      //   console.log('click', i);
+      // })
+      d3.select(this).on('click.bar click.foo', function () {
+        console.log('click.bar click.foo', i);
+      })
+    })
+    // let p1 = document.getElementById('p1')
+    // p1.addEventListener('click', function () {
+    //   console.log('p1');
+    // },true)
+    // let box = document.getElementById('box')
+    // box.addEventListener('click', function () {
+    //   console.log('box');
+    // })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./d3.v4.js"></script>
+</head>
+
+<body>
+  <div id="box">
+    <p class="p1"></p>
+    <p class="p2"></p>
+    <p class="p3"></p>
+    <p class="p4"></p>
+    <p class="p5"></p>
+    <p class="p6"></p>
+    <p class="p7"></p>
+    <p class="p8"></p>
+  </div>
+  <script>
+    // 测试demo1
+    let data = [1, 2, 3, 4, 5,6]
+    let res = d3.selectAll("#box").selectAll('p').data(data).text(function (d) {
+      return d
+    })
+    // res.exit().remove()
+    let enter = res.enter().append("p").text(function (d) {
+      return d + '哈哈'
+    }).style('color','red')
+    res.merge(enter)
+    console.log('window:',d3.window(d3.select("#box")))
+    // 测试demo2
+  </script>
+</body>
+
+</html>
